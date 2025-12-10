@@ -10,7 +10,9 @@ import model.PredictionResult;
 public class SalesForecaster implements IPredictiveModel {
 
     // Simulación de parámetros del modelo
-    private static final double GROWTH_FACTOR = 1.15; // Proyecta un crecimiento del 15%
+    // Simulación de parámetros del modelo
+    // La configuración ahora viene de ConfigurationContext
+    // private static final double GROWTH_FACTOR = 1.15;
 
     @Override
     public PredictionResult predict(HarmonizedData data) {
@@ -19,10 +21,13 @@ public class SalesForecaster implements IPredictiveModel {
             return new PredictionResult("Unknown", 0.0, 0.0, "Error: Invalid Data");
         }
 
+        // Obtener configuración global
+        double growthFactor = config.ConfigurationContext.getInstance().getGrowthFactor();
+
         // 2. Lógica de Predicción (Simulación de IA)
         // Tomamos el valor actual y proyectamos el futuro
         double currentVal = data.getValue();
-        double projectedVal = currentVal * GROWTH_FACTOR;
+        double projectedVal = currentVal * growthFactor;
 
         // 3. Cálculo de confianza (Simulación con mayor variabilidad)
         // Simulamos que el modelo tiene variaciones basadas en "factores externos"
