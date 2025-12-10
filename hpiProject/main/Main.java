@@ -1,4 +1,4 @@
-package hpi_project;
+package main;
 
 import java.util.Scanner;
 
