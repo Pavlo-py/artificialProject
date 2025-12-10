@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * Objeto de transferencia que contiene el resultado final del análisis
+ * predictivo.
+ */
 public class PredictionResult {
     private final String targetVariable; // Qué estamos prediciendo (ej. "Ingresos Q3")
     private final double predictedValue; // El resultado numérico
@@ -13,22 +17,24 @@ public class PredictionResult {
         this.modelUsed = modelUsed;
     }
 
-    // Método formateado para mostrar en consola (CLI)
-    public void printReport() {
-        System.out.println("====== REPORTE DE PREDICCIÓN ======");
-        System.out.println("Variable Objetivo: " + targetVariable);
-        System.out.println("Modelo Utilizado : " + modelUsed);
-        System.out.printf("Valor Predicho   : %.2f\n", predictedValue);
-        System.out.printf("Confianza        : %.1f%%\n", confidenceScore * 100);
-        System.out.println("===================================");
-    }
+    // --- GETTERS (Necesarios para que el Main pueda leer los datos) ---
 
-    // Getters estándar
     public double getPredictedValue() {
         return predictedValue;
     }
 
     public double getConfidenceScore() {
         return confidenceScore;
+    }
+
+    // ¡ESTE ES EL QUE FALTABA!
+    public String getModelName() {
+        return modelUsed;
+    }
+
+    // Método opcional para reporte rápido
+    public void printReport() {
+        System.out.println("Variable: " + targetVariable);
+        System.out.println("Valor: " + predictedValue);
     }
 }

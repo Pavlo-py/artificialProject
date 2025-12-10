@@ -11,7 +11,6 @@ public class SalesForecaster implements IPredictiveModel {
 
     // Simulación de parámetros del modelo
     private static final double GROWTH_FACTOR = 1.15; // Proyecta un crecimiento del 15%
-    private static final double BASE_CONFIDENCE = 0.85; // 85% de confianza base
 
     @Override
     public PredictionResult predict(HarmonizedData data) {
@@ -25,10 +24,19 @@ public class SalesForecaster implements IPredictiveModel {
         double currentVal = data.getValue();
         double projectedVal = currentVal * GROWTH_FACTOR;
 
-        // 3. Cálculo de confianza (Simulación)
-        // Si el valor es muy alto, la confianza baja ligeramente (incertidumbre de
-        // mercado)
-        double confidence = (currentVal > 10000) ? BASE_CONFIDENCE - 0.05 : BASE_CONFIDENCE;
+        // 3. Cálculo de confianza (Simulación con mayor variabilidad)
+        // Simulamos que el modelo tiene variaciones basadas en "factores externos"
+        // aleatorios
+        // Genera una confianza base entre 0.70 y 0.95
+        double randomFactor = 0.70 + (Math.random() * 0.25);
+
+        // Ajuste por magnitud: valores extremos suelen tener menor confianza
+        double magnitudeAdjustment = (currentVal > 10000) ? -0.05 : 0.02;
+
+        double confidence = randomFactor + magnitudeAdjustment;
+
+        // Clampear para asegurar que esté entre 0 y 1
+        confidence = Math.max(0.0, Math.min(1.0, confidence));
 
         // 4. Retornar el resultado encapsulado
         return new PredictionResult(

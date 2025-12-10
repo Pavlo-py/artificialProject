@@ -14,36 +14,49 @@ public class RuleBasedHarmonizer implements IHarmonizer {
         // 1. Obtener el contenido sucio
         String rawContent = rawRecord.getRawContent();
 
-        // 2. Validación rápida (Fail Fast)
+        // 2. Validación rápida con recuperación por defecto
         if (rawContent == null || rawContent.trim().isEmpty()) {
-            System.out.println("[Harmonizer] Alerta: Dato vacío recibido de " + rawRecord.getSourceId());
-            return new HarmonizedData(0.0, "Unknown", false);
+            return new HarmonizedData(0.0, "Missing_Value", true); // No lo invalidamos, lo marcamos como 0
         }
 
-        // 3. Limpieza (Simulando "Data Cleansing")
-        // Quitamos símbolos de moneda y espacios que puedan romper el parseo
+        // 3. Limpieza preliminar
         String cleanedContent = rawContent.trim()
                 .replace("€", "")
                 .replace("$", "")
                 .replace("EUR", "")
-                .replace(",", ".") // Normalizar decimales a punto
-                .replaceAll("\\s+", ""); // Quitar todos los espacios
+                .replace(",", ".")
+                .replaceAll("\\s+", "");
 
-        // 4. Transformación y Categorización
+        // 4. Transformación Inteligente
+        double value;
+        String category = detectCategory(rawRecord.getSourceId());
+
         try {
-            double value = Double.parseDouble(cleanedContent);
-
-            // Simulamos que la IA detecta la categoría según el ID de la fuente
-            String category = detectCategory(rawRecord.getSourceId());
-
-            // Retornamos el dato limpio y marcado como válido (true)
-            return new HarmonizedData(value, category, true);
+            // Intento A: Parseo directo
+            value = Double.parseDouble(cleanedContent);
 
         } catch (NumberFormatException e) {
-            // Si falla al convertir a número, no rompemos el programa.
-            // Retornamos un dato inválido para que el sistema lo ignore o reporte.
-            return new HarmonizedData(0.0, "Format_Error", false);
+            // Intento B: Recuperación por Regex (Buscar cualquier patrón numérico)
+            try {
+                java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("(\\d+(\\.\\d+)?)")
+                        .matcher(rawContent);
+                if (matcher.find()) {
+                    value = Double.parseDouble(matcher.group(1));
+                    category = category + "_Recovered"; // Marcamos que fue recuperado
+                } else {
+                    // Fallo total: Asignar 0 por defecto
+                    value = 0.0;
+                    category = "Unreadable_Data";
+                }
+            } catch (Exception ex) {
+                value = 0.0;
+                category = "Error_Recovery_Failed";
+            }
         }
+
+        // Retornamos SIEMPRE un dato válido (isValid = true) para que entre al flujo,
+        // confiando en que la categoría alertará si es un dato raro.
+        return new HarmonizedData(value, category, true);
     }
 
     /**
