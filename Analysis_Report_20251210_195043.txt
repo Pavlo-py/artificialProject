@@ -1,0 +1,247 @@
+==================================================
+          ARTIFICIAL SOCIETY - REPORT
+          Generated: 2025-12-10T19:50:43.912842200
+==================================================
+
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1380,57
+ - Confidence: 89,6%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 51,98
+ - Confidence: 94,5%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 3910,00
+ - Confidence: 92,4%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 92,4%
+--------------------------------------------------
+RECORD ID: CRM_Sales_East
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 2415,00
+ - Confidence: 93,7%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 11,50
+ - Confidence: 96,8%
+--------------------------------------------------
+RECORD ID: CRM_Sales_West
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 5751,14
+ - Confidence: 83,2%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 53,02
+ - Confidence: 75,5%
+--------------------------------------------------
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1552,79
+ - Confidence: 87,5%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 92,9%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Err
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 96,8%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 3968,08
+ - Confidence: 80,3%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Pres_03
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1164,95
+ - Confidence: 86,6%
+--------------------------------------------------
+RECORD ID: CRM_Sales_East
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 2357,50
+ - Confidence: 80,4%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 55,78
+ - Confidence: 96,9%
+--------------------------------------------------
+RECORD ID: CRM_Sales_West
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 5865,00
+ - Confidence: 84,8%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 13,80
+ - Confidence: 74,0%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 83,3%
+--------------------------------------------------
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1840,00
+ - Confidence: 87,3%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 63,25
+ - Confidence: 89,4%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 4140,00
+ - Confidence: 92,5%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 84,9%
+--------------------------------------------------
+RECORD ID: CRM_Sales_East
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 2185,58
+ - Confidence: 84,4%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Pres_03
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1167,25
+ - Confidence: 90,4%
+--------------------------------------------------
+RECORD ID: CRM_Sales_West
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 5980,00
+ - Confidence: 83,6%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 66,93
+ - Confidence: 82,7%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 75,1%
+--------------------------------------------------
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1610,86
+ - Confidence: 76,3%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 17,25
+ - Confidence: 91,3%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 3795,00
+ - Confidence: 90,5%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Err
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 86,6%
+--------------------------------------------------
+RECORD ID: CRM_Sales_East
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 2472,50
+ - Confidence: 76,8%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 50,60
+ - Confidence: 91,7%
+--------------------------------------------------
+RECORD ID: CRM_Sales_West
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 6095,00
+ - Confidence: 77,8%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 82,4%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Pres_03
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1163,80
+ - Confidence: 74,2%
+--------------------------------------------------
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1782,50
+ - Confidence: 89,3%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 12,65
+ - Confidence: 82,2%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 4025,00
+ - Confidence: 86,5%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 50,03
+ - Confidence: 72,9%
+--------------------------------------------------
+RECORD ID: CRM_Sales_East
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 2530,00
+ - Confidence: 76,4%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Err
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 95,8%
+--------------------------------------------------
+RECORD ID: CRM_Sales_West
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 6210,12
+ - Confidence: 85,4%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Vib_02
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 10,35
+ - Confidence: 78,1%
+--------------------------------------------------
+RECORD ID: ERP_Log_System
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 0,00
+ - Confidence: 73,6%
+--------------------------------------------------
+RECORD ID: CRM_Sales_North
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 1840,57
+ - Confidence: 96,5%
+--------------------------------------------------
+RECORD ID: IoT_Sensor_Temp_01
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 48,30
+ - Confidence: 87,8%
+--------------------------------------------------
+RECORD ID: CRM_Sales_South
+ - Target: Standard_Growth_Algorithm_v1
+ - Projected Value: 3967,50
+ - Confidence: 77,1%
+--------------------------------------------------
+
+[END OF REPORT]

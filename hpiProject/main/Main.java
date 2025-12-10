@@ -236,15 +236,4 @@ public class Main {
         System.out.println("##################################################");
     }
 
-    private static void printResultInBox(String source, HarmonizedData data, PredictionResult result) {
-        System.out.println("--------------------------------------------------");
-        System.out.println("    ANÁLISIS GENERADO PARA: " + source);
-        System.out.println("   > Dato Original Limpio: " + data.getValue());
-        System.out.println("   > Categoría Detectada : " + data.getCategory());
-        System.out.println("   -----------------------------------------------");
-        System.out.println("   PREDICCIÓN IA (" + result.getModelName() + ")");
-        System.out.printf("   > Proyección Futura   : %.2f\n", result.getPredictedValue());
-        System.out.printf("   > Nivel de Confianza  : %.1f%%\n", result.getConfidenceScore() * 100);
-        System.out.println("--------------------------------------------------\n");
-    }
 }
