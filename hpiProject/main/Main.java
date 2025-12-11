@@ -231,7 +231,7 @@ public class Main {
         System.out.println("##################################################");
         System.out.println("#                                                #");
         System.out.println("#          ARTIFICIAL SOCIETY PLATFORM           #");
-        System.out.println("#          v2.0 - Enterprise Edition             #");
+        System.out.println("#          v1.0 - Enterprise Edition             #");
         System.out.println("#                                                #");
         System.out.println("##################################################");
     }
