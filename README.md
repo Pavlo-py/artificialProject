@@ -38,11 +38,12 @@ ARTIFICIAL SOCIETY PLATFORM
 3. System Configuration
   The platform utilizes a Singleton Pattern via the ConfigurationContext class to manage global application state. This ensures a single source of truth for runtime parameters.
   
-  =====================================================================================================================
-  Parameter             Type        Default      Description
-  growthFactor          double      1.15         Determines the projection multiplier for the forecasting model.
-  simulationDelayMs     int         200          Controls the latency simulation for real-time processing visualization.
-  ======================================================================================================================
+| Parámetro | Tipo | Valor Default | Descripción |
+| :--- | :--- | :--- | :--- |
+| `growthFactor` | Double | `1.15` | Multiplicador de proyección de ventas. |
+| `simulationDelayMs` | Integer | `200` | Tiempo de espera para efectos visuales (ms). |
+| `sourcePath` | String | `mock_data.csv` | Ruta del archivo de ingesta de datos. |
+
 
 4. Deployment & Usage
   Prerequisites
