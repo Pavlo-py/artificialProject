@@ -1,11 +1,5 @@
 # ARTIFICIAL SOCIETY PLATFORM
 
-**Version:** 2.0 Enterprise Edition  
-**Build:** Stable  
-**Architecture:** HPI (Harmonization-Prediction-Interaction)
-
----
-
 ## 1. Executive Summary
 
 The **Artificial Society Platform (ASP)** is a modular predictive analytics system designed to process heterogeneous data streams. The platform implements a complete data pipeline ranging from raw ingestion to the generation of persistent business reports. Its core value lies in the **HPI Architecture**, which decouples data ingestion mechanisms from business logic and predictive modeling, ensuring high cohesion and low coupling across modules.
