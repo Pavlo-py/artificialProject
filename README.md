@@ -81,12 +81,16 @@ The system presents a state-driven CLI menu designed to guide the operator throu
     Utilize **Option 2** (or **Option 4**, depending on state) to modify the *Global Growth Factor* in real-time.
 
 ## 5. Directory Structure
+## 5. Directory Structure
+
+```text
 hpiProject/
-├── analytics/         # Predictive modeling strategies
-├── config/            # Global configuration (Singleton)
-├── harmonization/     # Data cleaning and standardization logic
-├── ingestion/         # Data loading implementations
-├── main/              # Entry point and UI orchestration
-├── model/             # Data Transfer Objects (DTOs)
-└── reporting/         # Output generation and file writing
+├── analytics/          # Predictive modeling strategies (Strategy Pattern)
+├── config/             # Global configuration & State (Singleton)
+├── harmonization/      # Data cleaning & standardization logic
+├── ingestion/          # Data loading implementations (Data Lake)
+├── main/               # Entry point and UI orchestration (CLI)
+├── model/              # Data Transfer Objects (DTOs)
+└── reporting/          # Output generation and persistent reporting
+```
 
