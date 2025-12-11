@@ -81,7 +81,6 @@ The system presents a state-driven CLI menu designed to guide the operator throu
     Utilize **Option 2** (or **Option 4**, depending on state) to modify the *Global Growth Factor* in real-time.
 
 ## 5. Directory Structure
-## 5. Directory Structure
 
 ```text
 hpiProject/
