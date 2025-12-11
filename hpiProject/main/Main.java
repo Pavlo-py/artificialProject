@@ -42,7 +42,7 @@ public class Main {
             boolean hasResults = (lastResults != null && !lastResults.isEmpty());
 
             printDynamicMenu(hasData, hasResults);
-            System.out.print("\n>> Seleccione opción: ");
+            System.out.print("\n>> Select option: ");
             String input = scanner.nextLine().trim();
 
             if ("4".equals(input) || "salir".equalsIgnoreCase(input)) {
@@ -65,12 +65,13 @@ public class Main {
             if (!hasData) {
                 switch (input) {
                     case "1":
-                        simulateLoading("Conectando con Data Lake");
+                        simulateLoading("Connecting to Data Lake");
                         loadedKnowledgeBase = dataLoader.loadData(csvFilePath);
                         if (!loadedKnowledgeBase.isEmpty()) {
-                            System.out.println(" [OK] Ingesta exitosa: " + loadedKnowledgeBase.size() + " registros.");
+                            System.out
+                                    .println(" [OK] Ingestion successful: " + loadedKnowledgeBase.size() + " records.");
                         } else {
-                            System.out.println(" [!] No se encontraron datos.");
+                            System.out.println(" [!] No data found.");
                         }
                         break;
                     case "2": // Ajustes
@@ -80,25 +81,25 @@ public class Main {
                         running = false;
                         break;
                     default:
-                        System.out.println(" [X] Opción inválida.");
+                        System.out.println(" [X] Invalid Option.");
                 }
             } else {
                 switch (input) {
                     case "1":
                         inspectData(loadedKnowledgeBase);
                         break;
-                    case "2": // Recargar
-                        simulateLoading("Refrescando caché");
+                    case "2": // Reload
+                        simulateLoading("Refreshing Cache");
                         loadedKnowledgeBase = dataLoader.loadData(csvFilePath);
                         // Limpiamos resultados anteriores pues los datos cambiaron
                         lastResults = null;
                         break;
                     case "3":
-                        simulateLoading("Ejecutando Modelos de IA");
+                        simulateLoading("Running AI Models");
                         lastResults = runAnalysisPipeline(loadedKnowledgeBase, harmonizer, aiModel, config);
 
-                        // Oferta proactiva de exportación
-                        System.out.print("\n>> ¿Desea guardar reporte detallado en disco? (y/n): ");
+                        // Proactive export offer
+                        System.out.print("\n>> Do you want to save detailed report to disk? (y/n): ");
                         if (scanner.nextLine().trim().equalsIgnoreCase("y")) {
                             reportExporter.exportReport(loadedKnowledgeBase, lastResults);
                         }
@@ -110,7 +111,7 @@ public class Main {
                         running = false;
                         break;
                     default:
-                        System.out.println(" [X] Opción inválida.");
+                        System.out.println(" [X] Invalid Option.");
                 }
             }
 
@@ -120,7 +121,7 @@ public class Main {
         }
 
         scanner.close();
-        System.out.println("\n=== SESIÓN FINALIZADA ===");
+        System.out.println("\n=== SESSION TERMINATED ===");
     }
 
     // --- MENÚS DINÁMICOS ---
@@ -128,35 +129,35 @@ public class Main {
     private static void printDynamicMenu(boolean hasData, boolean hasResults) {
         System.out.println("\n┌──────────────────────────────────────────┐");
         if (!hasData) {
-            System.out.println("|  ESTADO: ESPERANDO DATOS                 |");
+            System.out.println("|  STATUS: WAITING FOR DATA                |");
             System.out.println("├──────────────────────────────────────────┤");
-            System.out.println("|  [1] Cargar Datos (Ingestion)            |");
-            System.out.println("|  [2] Configuración Global (IA Params)    |");
-            System.out.println("|  [3] Salir                               |");
+            System.out.println("|  [1] Load Data (Ingestion)               |");
+            System.out.println("|  [2] Global Configuration (AI Params)    |");
+            System.out.println("|  [3] Exit                                |");
         } else {
-            System.out.println("|  ESTADO: DATOS EN MEMORIA (" + (hasResults ? "ANALIZADO" : "PENDIENTE") + ")   |");
+            System.out.println("|  STATUS: DATA IN MEMORY (" + (hasResults ? "ANALYZED" : "PENDING") + ")      |");
             System.out.println("├──────────────────────────────────────────┤");
-            System.out.println("|  [1] Inspeccionar Datos (Raw View)       |");
-            System.out.println("|  [2] Re-Cargar Datos (Refresh)           |");
-            System.out.println("|  [3] EJECUTAR MOTOR IA (Predict)         |");
-            System.out.println("|  [4] Configuración Global (IA Params)    |");
-            System.out.println("|  [5] Salir                               |");
+            System.out.println("|  [1] Inspect Data (Raw View)             |");
+            System.out.println("|  [2] Re-Load Data (Refresh)              |");
+            System.out.println("|  [3] RUN AI ENGINE (Predict)             |");
+            System.out.println("|  [4] Global Configuration (AI Params)    |");
+            System.out.println("|  [5] Exit                                |");
         }
         System.out.println("└──────────────────────────────────────────┘");
     }
 
     private static void openSettingsMenu(Scanner scanner, ConfigurationContext config) {
-        System.out.println("\n>>> CONFIGURACIÓN DE SISTEMA <<<");
-        System.out.println("Growth Factor Actual: " + config.getGrowthFactor() + "x");
-        System.out.print("Ingrese nuevo factor (ej. 1.5 para 50% crecimiento), o ENTER para cancelar: ");
+        System.out.println("\n>>> SYSTEM CONFIGURATION <<<");
+        System.out.println("Current Growth Factor: " + config.getGrowthFactor() + "x");
+        System.out.print("Enter new factor (e.g., 1.5 for 50% growth), or ENTER to cancel: ");
         String val = scanner.nextLine().trim();
         if (!val.isEmpty()) {
             try {
                 double newFactor = Double.parseDouble(val);
                 config.setGrowthFactor(newFactor);
-                System.out.println(" [OK] Configuración actualizada.");
+                System.out.println(" [OK] Configuration updated.");
             } catch (NumberFormatException e) {
-                System.out.println(" [!] Valor inválido.");
+                System.out.println(" [!] Invalid value.");
             }
         }
     }
@@ -169,7 +170,7 @@ public class Main {
         List<PredictionResult> results = new ArrayList<>();
         int processed = 0;
 
-        System.out.println("\n>>> Resultados en tiempo real:");
+        System.out.println("\n>>> Real-time Results:");
         System.out.println("----------------------------------------");
 
         for (RawDataRecord rawRecord : rawRecords) {
@@ -192,7 +193,7 @@ public class Main {
             }
         }
         System.out.println("----------------------------------------");
-        System.out.println("Total procesados: " + processed);
+        System.out.println("Total processed: " + processed);
         return results;
     }
 
@@ -211,7 +212,7 @@ public class Main {
     }
 
     private static void inspectData(List<RawDataRecord> records) {
-        System.out.println("\n>>> INSPECTOR DE DATOS CRUDOS (Top 5)");
+        System.out.println("\n>>> RAW DATA INSPECTOR (Top 5)");
         int count = 0;
         for (RawDataRecord r : records) {
             if (count >= 5)
@@ -222,7 +223,7 @@ public class Main {
     }
 
     private static void waitForEnter(Scanner s) {
-        System.out.println("\n(Presione ENTER para continuar)");
+        System.out.println("\n(Press ENTER to continue)");
         s.nextLine();
     }
 

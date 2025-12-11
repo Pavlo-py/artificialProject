@@ -18,7 +18,7 @@ public class CsvDataLoader implements IDataLoader {
     public List<RawDataRecord> loadData(String filePath) {
         List<RawDataRecord> records = new ArrayList<>();
 
-        System.out.println("[Ingestion] Iniciando lectura de archivo: " + filePath);
+        System.out.println("[Ingestion] Starting file read: " + filePath);
 
         // Try-with-resources para asegurar que el archivo se cierra automáticamente
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -49,10 +49,10 @@ public class CsvDataLoader implements IDataLoader {
                     records.add(new RawDataRecord(sourceId, rawValue));
                 }
             }
-            System.out.println("[Ingestion] Lectura completada. Registros cargados: " + records.size());
+            System.out.println("[Ingestion] Read complete. Records loaded: " + records.size());
 
         } catch (IOException e) {
-            System.err.println("[Ingestion Error] No se pudo leer el archivo: " + e.getMessage());
+            System.err.println("[Ingestion Error] Could not read file: " + e.getMessage());
         }
 
         return records;

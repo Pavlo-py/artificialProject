@@ -16,7 +16,7 @@ public class ReportExporter {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         String filename = "Analysis_Report_" + timestamp + ".txt";
 
-        System.out.println("\n>>> Generando reporte en disco: " + filename + "...");
+        System.out.println("\n>>> Generating report on disk: " + filename + "...");
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
             // Cabecera del reporte
@@ -40,10 +40,10 @@ public class ReportExporter {
             }
 
             writer.println("\n[END OF REPORT]");
-            System.out.println(">>> [OK] Reporte guardado exitosamente.");
+            System.out.println(">>> [OK] Report saved successfully.");
 
         } catch (IOException e) {
-            System.err.println(">>> [ERROR] Fallo al escribir el reporte: " + e.getMessage());
+            System.err.println(">>> [ERROR] Failed to write report: " + e.getMessage());
         }
     }
 }

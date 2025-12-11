@@ -31,11 +31,11 @@ public class ConfigurationContext {
     public void setGrowthFactor(double growthFactor) {
         // Validación básica
         if (growthFactor < 0.0) {
-            System.out.println("[Config] Error: El factor no puede ser negativo.");
+            System.out.println("[Config] Error: Factor cannot be negative.");
             return;
         }
         this.growthFactor = growthFactor;
-        System.out.println("[Config] Nuevo factor de crecimiento establecido: " + growthFactor + "x");
+        System.out.println("[Config] New growth factor set: " + growthFactor + "x");
     }
 
     public int getSimulationDelayMs() {
